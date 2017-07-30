@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+   <body>
+
+      <h2 style = "text-align: center;">Enter Iris Params</h2>
+
+      {% for message in form.SepalLength.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+
+      {% for message in form.SepalWidth.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+
+      {% for message in form.PetalLength.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+
+      {% for message in form.PetalWidth.errors %}
+         <div>{{ message }}</div>
+      {% endfor %}
+
+      <form action = "" method = post>
+         <fieldset>
+            <legend>Enter parameters here.</legend>
+
+            <div style = font-size:20px; font-weight:bold; margin-left:150px;>
+               {{ form.SepalLength.label }}<br>
+               {{ form.SepalLength }}
+               <br>
+               {{ form.SepalWidth.label }}<br>
+               {{ form.SepalWidth }}
+               <br>
+               {{ form.PetalLength.label }}<br>
+               {{ form.PetalLength }}
+               <br>
+               {{ form.PetalWidth.label }}<br>
+               {{ form.PetalWidth }}
+               <br>
+               {{ form.submit }}
+            </div>
+
+         </fieldset>
+      </form>
+
+   </body>
+</html>
+
